@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+		*{
+			margin:0;
+			padding:0;
+			background-color: white;
+		}
+		/*animation-name: jump;*/
+  		/*animation-duration: 4s;*/
+
+  		#sood{
+  			display: none;
+  			transition: all 15s ease
+  		}
+		.float {
+		    position: relative;
+		    -webkit-animation: floatBubble 7s ease;
+		   
+		}
+		@-webkit-keyframes floatBubble {
+		    0% {
+		        top:500px;
+		    }
+		    100% {
+		        top: -365px;
+		        
+		    }
+		}
+		
+		
+
+		
+		}
+
+	
+	</style>
+	<title>New Project</title>
+</head>
+<body>
+	
+<div style="width:1520px;height:140px" id="ankush">
+	<img src="e1.jpeg" style="float: left;padding-left: 240px;height:140px;width: 120px" id="t1">
+	<img src="e2.jpeg" style="float: left;padding-left: 100px;height:140px;width: 120px" id="t2">
+	<img src="e3.jpeg" style="float: left;padding-left: 100px;height:140px;width: 120px" id="t3">
+	<img src="e4.jpeg" style="float: left;padding-left: 100px;height:140px;width: 120px" id="t4">
+	<img src="e0.jpeg" style="float: left;padding-left: 100px;height:140px;width: 120px" id="t5">
+
+</div>
+<div style="width:1520px;height:140px;background-color: white;margin-top: 25px">
+	
+		<p style="font-size: 5rem;font-family: 'Great Vibes', cursive;" id="sood">
+				HAPPY BIRTHDAY
+</p>
+	
+</div>
+<div style="background-color: white;margin-top:200px;width: 1520px;height: 140px " >
+
+	<img src="b1.png" style="width:150px;height:140px;float: left;margin-left: 240px" class="float" id="f1">
+	<img src="b2.png" style="width:150px;height:140px;float: left;margin-left: 70px" class="float" id="f2">
+	<img src="b3.png" style="width:150px;height:140px;float: left;margin-left: 70px" class="float" id="f3">
+	<img src="b4.png" style="width:150px;height:140px;float: left;margin-left: 70px" class="float" id="f4">
+	<img src="b0.png" style="width:150px;height:140px;float: left;margin-left: 70px" class="float" id="f5">
+</div>
+<div style="background-color: white;width: 1520px;height: 100px;margin-top: 150px">
+<input type="submit" value="Switch On Bulb" style="width: 340px;height: 50px;background-color: #07793D;border:0px;font-size: 30px;margin-left: 490px;color:white;border-radius:20px;display: none" onclick="sood()" id="but">
+
+
+<input type="submit" value="Play Music" style="width: 340px;height: 50px;background-color: #07793D;border:0px;font-size: 30px;margin-left: 490px;color:white;border-radius:20px;display: none" onclick="soo()" id="butt">
+
+<input type="submit" value="Add Dance" style="width: 340px;height: 50px;background-color: #07793D;border:0px;font-size: 30px;margin-left: 490px;color:white;border-radius:20px;display: none" onclick="so()" id="butto">
+</div>
+
+<script type="text/javascript">
+	window.onload = function(){
+  document.getElementById('but').click();
+}
+
+	var x=document.getElementById("ankush");
+	var image=["e1.jpeg","e2.jpeg","e3.jpeg","e4.jpeg","e0.jpeg"];
+	var ballonimage=["b2.png","b3.png","b4.png","b0.png","b1.png"];
+	function sood(){
+		setInterval(function(){
+			var m=Math.floor((Math.random() * 5));
+       var y=document.getElementById("t1");
+       y.src="e"+(m+1)%5+".jpeg";
+       var z=document.getElementById("t2");
+       z.src="e"+(m+2)%5+".jpeg";
+       var a=document.getElementById("t3");
+       a.src="e"+(m+3)%5+".jpeg";
+       var b=document.getElementById("t4");
+       b.src="e"+(m+4)%5+".jpeg";
+       var c=document.getElementById("t5");
+       c.src="e"+(m)%5+".jpeg";
+
+//ballon
+
+
+var p=document.getElementById("f1");
+       p.src="b"+(m+1)%5+".png";
+       var q=document.getElementById("f2");
+       q.src="b"+(m+2)%5+".png";
+       var r=document.getElementById("f3");
+       r.src="b"+(m+3)%5+".png";
+       var s=document.getElementById("f4");
+       s.src="b"+(m+4)%5+".png";
+       var w=document.getElementById("f5");
+       w.src="b"+(m)%5+".png";
+	},500);
+	
+setTimeout(function(){
+var s=document.getElementById("sood");
+s.style.display="inline-block";
+s.style.paddingLeft="420px";
+
+
+}, 8000);
+
+		
+	}
+	
+
+	
+</script>
+</body>
+</html>
